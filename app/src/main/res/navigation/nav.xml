@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/HOME">
+
+    <fragment
+        android:id="@+id/HOME"
+        android:name="com.example.newsapp.HOME"
+        android:label="HOME" >
+        <action
+            android:id="@+id/action_HOME_to_indiaNews"
+            app:destination="@id/indiaNews" />
+    </fragment>
+    <fragment
+        android:id="@+id/indiaNews"
+        android:name="com.example.newsapp.IndiaNews"
+        android:label="IndiaNews" >
+        <action
+            android:id="@+id/action_indiaNews_to_HOME"
+            app:destination="@id/HOME" />
+    </fragment>
+</navigation>
