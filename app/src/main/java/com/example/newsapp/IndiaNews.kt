@@ -1,6 +1,7 @@
 package com.example.newsapp
 
-import android.content.Context
+
+import android.app.ProgressDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,13 +12,13 @@ import com.bumptech.glide.Glide
 import com.example.newsapp.IndiaNews.IndianNewsAdapter.*
 import com.example.newsapp.databinding.IndianewsBinding
 import com.example.newsapp.databinding.ItemdataBinding
-import recycleviewAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class IndiaNews : Fragment() {
     private var binding: IndianewsBinding? = null
+    private lateinit var progressDialog: ProgressDialog
 
 
     override fun onCreateView(
@@ -34,9 +35,14 @@ class IndiaNews : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        progressDialog = ProgressDialog(requireContext())
+        progressDialog.setMessage("Fetching News....")
+        progressDialog.setCancelable(false)
+        progressDialog.show()
         binding?.recyclerView?.setHasFixedSize(true)
 
         getdata()
+        if (progressDialog.isShowing) progressDialog    .dismiss()
 
     }
 
@@ -70,9 +76,7 @@ class IndiaNews : Fragment() {
                 var title = AD?.title
                 var description = AD?.description
                 var image = AD?.imageView
-
         }
-
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
 

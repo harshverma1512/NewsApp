@@ -15,15 +15,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root!!)
 
-        val fragment = IndiaNews()
+        val fragment = HOME()
+        val fragment2 = IndiaNews()
 
         binding?.worldNews?.setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
-        }
+            supportFragmentManager.commit {
+                replace(R.id.fragmentContainerView,fragment)
+            }        }
 
         binding?.indiaNews?.setOnClickListener{
             supportFragmentManager.commit {
-                replace(R.id.fragmentContainerView,fragment)
+                replace(R.id.fragmentContainerView,fragment2)
             }
         }
     }
