@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Harsh Verma/NewsApp/app/src/main/res/layout-v21/itemview.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/Harsh Verma/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.35280797101449274" />
-        <entry key="..\:/Users/Harsh Verma/NewsApp/app/src/main/res/layout/home.xml" value="0.3625" />
+        <entry key="..\:/Users/Harsh Verma/NewsApp/app/src/main/res/layout/click_itemview.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/Harsh Verma/NewsApp/app/src/main/res/layout/home.xml" value="0.25" />
         <entry key="..\:/Users/Harsh Verma/NewsApp/app/src/main/res/layout/indianews.xml" value="0.3625" />
         <entry key="..\:/Users/Harsh Verma/NewsApp/app/src/main/res/layout/itemdata.xml" value="0.35280797101449274" />
+        <entry key="..\:/Users/Harsh Verma/NewsApp/app/src/main/res/layout/itemview.xml" value="0.35833333333333334" />
       </map>
     </option>
   </component>

@@ -1,17 +1,19 @@
-import com.google.gson.annotations.SerializedName
-import androidx.annotation.Keep
+package com.example.newsapp.DATA
 
-@Keep
-data class newsdata(
+
+import com.google.gson.annotations.SerializedName
+
+data class indiannewsdata(
     @SerializedName("articles")
-    val articles: List<Article>,
+    val articles: List<Article?>?,
+    @SerializedName("status")
+    val status: String?,
     @SerializedName("totalResults")
-    val totalResults: Int?,
+    val totalResults: Int?
 ) {
-    @Keep
     data class Article(
         @SerializedName("author")
-        val author: String?,
+        val author: Any?,
         @SerializedName("content")
         val content: String?,
         @SerializedName("description")
@@ -25,14 +27,13 @@ data class newsdata(
         @SerializedName("url")
         val url: String?,
         @SerializedName("urlToImage")
-        val urlToImage: String?,
+        val urlToImage: String?
     ) {
-        @Keep
         data class Source(
             @SerializedName("id")
             val id: Any?,
             @SerializedName("name")
-            val name: String?,
+            val name: String?
         )
     }
 }
